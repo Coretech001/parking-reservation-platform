@@ -212,7 +212,7 @@ Make sure the following are installed:
 <summary><strong>Step 1: Clone the Repository</strong></summary>
 
 ```bash
-git clone https://github.com/SiyaGarg9/SmartParkingSystem.git
+git clone https://github.com/Coretech001/SmartParkingSystem.git
 
 cd SmartParkingSystem
 ```
@@ -427,19 +427,7 @@ Contributions from team members are managed through individual GitHub accounts, 
 | Project Name | SmartPark – Smart Parking Reservation System |
 | Project Type | Full-Stack Web Application |
 | Domain | Smart Cities, Intelligent Transportation Systems and Parking Management |
-| Repository | [SmartParkingReservationSystem](https://github.com/SiyaGarg9/SmartParkingReservationSystem) |
-
-## 👥 Contributors
-
-This project was developed collaboratively by:
-
-| Contributor | GitHub Profile | Role |
-|---|---|---|
-| Siya Garg | [@SiyaGarg9](https://github.com/SiyaGarg9) | Backend |
-| Vaishnavi Singla | [@vaishnavisingla222](https://github.com/vaishnavisingla222) | Frontend |
-| Nehmat Kaushal | [@nkaushalbe24-crypto](https://github.com/nkaushalbe24-crypto) | Database |
-
-We collaborated on designing, developing, and integrating the different components of this project.
+| Repository | [SmartParkingReservationSystem](https://github.com/Coretech001/SmartParkingReservationSystem) |
 
 ---
 
