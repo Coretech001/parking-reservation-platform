@@ -5,21 +5,19 @@
 
 ### Reservation & Management Platform
 
-A full-stack web application designed to simplify parking reservations and management through online bookings, parking slot availability, digital payments, QR-based vehicle entry and exit, and administrative controls.
+A full-stack web application designed to simplify parking reservations and management through online bookings, parking slot availability, digital payment functionality, QR-based vehicle entry and exit, and administrative controls.
 
 <br />
-
-<a href="https://smart-parking-reservation-system-one.vercel.app/">
-  <img src="https://img.shields.io/badge/🚀_Live_Demo-Explore_Project-2563EB?style=for-the-badge" />
-</a>
-
-<br /><br />
 
 <img src="https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black" />
 <img src="https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/Build-Vite-646CFF?logo=vite&logoColor=white" />
+
+<br /><br />
+
+**Project Status:** Under Development
 
 </div>
 
@@ -28,7 +26,7 @@ A full-stack web application designed to simplify parking reservations and manag
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
-- [Project Highlights](#-project-highlights)
+- [Project Objectives](#-project-objectives)
 - [Key Features](#-key-features)
 - [Technology Stack](#-technology-stack)
 - [System Architecture](#-system-architecture)
@@ -47,31 +45,23 @@ A full-stack web application designed to simplify parking reservations and manag
 
 ## 🌟 Overview
 
-**Parking Reservation** is a web-based reservation and management platform designed to improve the parking experience for users and simplify parking operations for administrators.
+**Parking Reservation** is a web-based parking reservation and management platform designed to improve the parking experience for users and simplify parking operations for administrators.
 
-The platform allows users to discover parking areas, check available parking slots, make reservations, access booking information, and use QR-based vehicle entry and exit functionality.
+The platform allows users to discover parking areas, check parking slot availability, make reservations, access booking information, and use QR-based vehicle entry and exit functionality.
 
 Administrators can manage parking areas, parking slots, bookings, registered users, EV charging facilities, and other operational information through a centralized dashboard.
 
 The application combines a React frontend, a FastAPI backend, and a PostgreSQL database to provide an integrated full-stack solution.
 
-### 🎯 Project Objectives
+## 🎯 Project Objectives
 
 - Simplify the parking reservation process.
 - Improve parking space utilization.
 - Reduce the time spent searching for available parking.
-- Digitize reservation and parking management workflows.
+- Digitize parking reservations and management workflows.
 - Provide centralized administrative controls.
 - Improve the overall parking experience.
-
-## 💡 Project Highlights
-
-- **User Portal:** Search parking areas, check availability, and reserve parking spaces.
-- **Admin Dashboard:** Manage parking areas, slots, users, bookings, and operations.
-- **QR-Based Operations:** Support vehicle entry and exit verification.
-- **Reservation Management:** Handle booking creation, status updates, and cancellations.
-- **EV Charging Support:** Manage electric vehicle charging facilities.
-- **Full-Stack Architecture:** React, FastAPI, SQLAlchemy, and PostgreSQL.
+- Organize parking operations through a unified platform.
 
 ## ✨ Key Features
 
@@ -82,7 +72,7 @@ The application combines a React frontend, a FastAPI backend, and a PostgreSQL d
 - Check slot availability based on date and time.
 - Reserve parking slots online.
 - View booking history and booking details.
-- Access the digital payment module.
+- Access the payment module.
 - Generate QR codes for parking entry.
 - Access QR-based parking exit functionality.
 - Navigate to assigned parking locations.
@@ -104,17 +94,17 @@ The application combines a React frontend, a FastAPI backend, and a PostgreSQL d
 
 ### 🚘 Reservation & Parking Management
 
-- Calculate parking slot availability based on existing bookings.
-- Prevent overlapping reservations.
-- Manage automated booking status updates.
-- Support QR-based vehicle entry verification.
-- Support QR-based vehicle exit verification.
-- Complete bookings after exit verification.
-- Release parking slots after booking completion or cancellation.
-- Support EV charging facilities.
-- Provide indoor parking navigation support.
+- Parking slot availability based on existing bookings.
+- Prevention of overlapping reservations.
+- Booking status management.
+- QR-based vehicle entry verification.
+- QR-based vehicle exit verification.
+- Booking completion after exit verification.
+- Parking slot release after booking completion or cancellation.
+- EV charging facility support.
+- Indoor parking navigation support.
 
-> **Note:** Feature descriptions reflect the documented project functionality. External payment gateways, IoT sensors, and live integrations depend on their actual implementation and configuration.
+> **Note:** The availability of payment gateways, external services, IoT sensors, and other integrations depends on their implementation and configuration.
 
 ## 💻 Technology Stack
 
@@ -130,11 +120,23 @@ The application combines a React frontend, a FastAPI backend, and a PostgreSQL d
 | Frontend Routing | React Router |
 | Version Control | Git and GitHub |
 
+### Frontend
+
+The frontend is developed using React.js and Vite, providing separate interfaces for users and administrators.
+
+### Backend
+
+The backend uses Python and FastAPI to handle application logic, authentication, reservation operations, and API requests.
+
+### Database
+
+PostgreSQL stores application data, while SQLAlchemy provides database interaction through an ORM.
+
 ## 🏗️ System Architecture
 
 The application follows a client-server architecture.
 
-The React frontend communicates with the FastAPI backend through REST APIs. The backend handles authentication, application logic, request processing, and database operations using SQLAlchemy ORM.
+The React frontend communicates with the FastAPI backend through REST APIs. The backend manages authentication, application logic, request processing, and database operations using SQLAlchemy ORM.
 
 ```mermaid
 flowchart TB
@@ -165,6 +167,8 @@ flowchart TB
 ```
 
 ## 📁 Project Structure
+
+The following structure represents the documented project organization.
 
 ```text
 parking-reservation-platform/
@@ -212,11 +216,11 @@ parking-reservation-platform/
 
 ## 🚀 Getting Started
 
-Follow these instructions to run the application locally.
+Follow these instructions to set up and run the application locally.
 
 ### Prerequisites
 
-Make sure you have installed:
+Make sure the following tools are installed:
 
 - Python 3.10 or later
 - Node.js and npm
@@ -277,16 +281,21 @@ DATABASE_URL=postgresql+psycopg2://postgres:YOUR_PASSWORD@localhost:5432/smartpa
 SECRET_KEY=YOUR_SECRET_KEY
 ```
 
-Replace the example values with your PostgreSQL credentials and a securely generated secret key.
+Replace the example values with your actual PostgreSQL credentials and a securely generated secret key.
 
-**Important:** Never commit your `.env` file, database credentials, or secret keys to GitHub.
+**Important:**
+
+- Never commit your `.env` file to GitHub.
+- Never expose database passwords or secret keys.
+- Make sure sensitive environment files are included in `.gitignore`.
 
 ### 4. Database Setup
 
 1. Start your PostgreSQL server.
 2. Create a database named `smartparking`.
 3. Configure the database credentials in your `.env` file.
-4. Execute the project's database schema or initialization process to create the required tables.
+4. Execute the project's database schema or initialization process.
+5. Verify that the backend can connect to the database.
 
 ### 5. Run the Backend
 
@@ -302,7 +311,7 @@ Backend server:
 http://127.0.0.1:8000
 ```
 
-Swagger API documentation:
+Interactive API documentation:
 
 ```text
 http://127.0.0.1:8000/docs
@@ -310,7 +319,9 @@ http://127.0.0.1:8000/docs
 
 ### 6. Frontend Setup
 
-Open a second terminal and navigate to the frontend directory from the repository root:
+Open a second terminal from the repository root.
+
+Navigate to the frontend directory:
 
 ```bash
 cd frontend/frontendSmartPark
@@ -328,7 +339,7 @@ Start the development server:
 npm run dev
 ```
 
-The frontend is usually available at:
+The frontend development server is usually available at:
 
 ```text
 http://localhost:5173
@@ -340,7 +351,7 @@ Open the URL displayed in your terminal if Vite selects a different port.
 
 The application uses PostgreSQL for persistent data storage and SQLAlchemy as its Object Relational Mapper (ORM).
 
-The database supports information related to:
+The documented database areas include:
 
 - Users and authentication.
 - Parking areas and parking slots.
@@ -355,7 +366,7 @@ The database supports information related to:
 
 The backend provides RESTful APIs developed with FastAPI.
 
-Interactive API documentation is available through Swagger UI when the backend is running.
+Interactive API documentation is available through Swagger UI when the backend server is running.
 
 **Local API Documentation:**
 
@@ -412,7 +423,15 @@ The documented security features include:
 - Backend validation for booking and parking operations.
 - Protection of database credentials and secret keys.
 
-For production deployments, review authorization checks, input validation, password hashing, CORS configuration, secret management, and payment security.
+For production deployment, additional security reviews should cover:
+
+- Authorization and access control.
+- Input validation.
+- Password hashing.
+- CORS configuration.
+- Secret management.
+- Payment security.
+- API request validation.
 
 ## 🚀 Future Improvements
 
@@ -425,7 +444,16 @@ Potential enhancements for future versions:
 - Mobile application support.
 - Advanced parking analytics.
 - Predictive parking availability.
-- Improved reporting and monitoring.
+- Improved operational reporting.
+- Cloud deployment and production infrastructure.
+
+## 🌐 Deployment Status
+
+The application is currently not deployed to a public hosting platform.
+
+For now, the application can be configured and executed locally by following the installation instructions above.
+
+Deployment documentation and a public application URL can be added after the hosting environment has been configured.
 
 ## 🤝 Contributing
 
@@ -460,6 +488,7 @@ git push origin feature/your-feature-name
 | Detail | Information |
 |---|---|
 | Project Name | Parking Reservation |
+| Project Subtitle | Reservation & Management Platform |
 | Project Type | Full-Stack Web Application |
 | Project Context | Academic Team Project |
 | Domain | Parking Reservation and Management |
@@ -467,7 +496,8 @@ git push origin feature/your-feature-name
 | Backend | Python, FastAPI |
 | Database | PostgreSQL |
 | Repository Owner | coretech001 |
-| Live Demo | [Explore Project](https://smart-parking-reservation-system-one.vercel.app/) |
+| Repository Name | parking-reservation-platform |
+| Deployment Status | Not deployed yet |
 | GitHub Repository | [View Repository](https://github.com/coretech001/parking-reservation-platform) |
 
 ---
@@ -482,6 +512,6 @@ Developed as an academic team project.
 
 <br />
 
-[GitHub Profile](https://github.com/coretech001) · [Live Demo](https://smart-parking-reservation-system-one.vercel.app/)
+[GitHub Profile](https://github.com/coretech001)
 
 </div>
